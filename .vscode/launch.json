@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Streamlit App",
+            "type": "python",
+            "request": "launch",
+            "module": "streamlit",
+            "args": [
+                "run",
+                "${file}", // Isso aponta para o arquivo Python que você está editando
+                "--server.port",
+                "8501", // Porta padrão do Streamlit
+                "--server.headless",
+                "true" // Abre no navegador padrão automaticamente
+            ],
+            "console": "integratedTerminal", // Abre o terminal dentro do VS Code
+            "justMyCode": true // Para depurar apenas seu código, ignorando libs
+        }
+    ]
+}
