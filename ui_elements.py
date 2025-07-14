@@ -258,6 +258,7 @@ def render_footer():
     st.markdown("""
     <br>
     <small>*Lembre-se que este é um cálculo simulado e não substitui uma análise detalhada com um profissional de investimentos. A estimativa de dias úteis pode não ser exata devido a feriados variáveis.*</small>
+    <br>
+    <br>
     """, unsafe_allow_html=True)
-    st.markdown("---")
     st.info("Desenvolvido por Eduardo Bruschi Cardoso (Python e Streamlit)")
