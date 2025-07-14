@@ -48,7 +48,7 @@ def render_logo_and_separator():
 
 def render_main_title_and_intro():
     """Renderiza o título principal e a introdução."""
-    st.title("💰 Comparador de Renda Fixa")
+    st.title("💰 Comparador de Renda Fixa:")
     st.markdown("Compare o rendimento líquido de aplicações tributadas (IR regressivo) e isentas (LCI, LCA, CRI, CRA).")
 
 def render_input_forms():
