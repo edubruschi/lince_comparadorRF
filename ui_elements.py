@@ -40,10 +40,10 @@ def apply_custom_css():
 
 def render_logo_and_separator():
     """Renderiza o logo da empresa e uma linha separadora."""
-    col_left, col_center, col_right = st.columns([0.33, 0.66, 0.33])
-    with col_center:
-        st.image("https://linceinvest.com.br/wp-content/uploads/2024/03/Agrupar-1-1-2048x393.png", use_container_width=True)
-    st.markdown("<div class='divider'></div>", unsafe_allow_html=True)
+    #col_left, col_center, col_right = st.columns([0.33, 0.66, 0.33])
+    #with col_center:
+    #    st.image("https://linceinvest.com.br/wp-content/uploads/2024/03/Agrupar-1-1-2048x393.png", use_container_width=True)
+    #st.markdown("<div class='divider'></div>", unsafe_allow_html=True)
 
 
 def render_main_title_and_intro():
