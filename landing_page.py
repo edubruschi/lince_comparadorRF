@@ -38,7 +38,7 @@ def render_landing_page():
     #    st.image("https://linceinvest.com.br/wp-content/uploads/2024/03/Agrupar-1-1-2048x393.png", use_container_width=True)
 
     st.title("💰 Comparador de Renda Fixa!")
-    st.markdown("Informe apenas seu e-mail e telefone para acessar a ferramenta:")
+    st.markdown("Informe seu e-mail e telefone para acessar o simulador:")
         
     with st.form(key='lead_form'):
         email = st.text_input("Seu e-mail:")
@@ -55,7 +55,7 @@ def render_landing_page():
             # --- AJUSTE: Adicionando um spinner de loading ---
             with st.spinner("Salvando seus dados... Aguarde um momento."):
                 if save_to_google_sheets(email, phone):
-                    st.success("Cadastro realizado com sucesso! Você será redirecionado para a ferramenta.")
+                    st.success("Prontinho! Você será redirecionado para a ferramenta automaticamente.")
                     # A função save_to_google_sheets agora apenas retorna True/False
                     
                     # A mensagem de sucesso é mostrada aqui
