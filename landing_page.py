@@ -4,7 +4,7 @@ import streamlit as st
 import gspread
 
    
-def save_to_google_sheets(email, phone):
+def save_to_google_sheets(nome, phone):
     """
     Função para salvar e-mail e telefone no Google Sheets.
     As credenciais são carregadas do `st.secrets`.
@@ -17,7 +17,7 @@ def save_to_google_sheets(email, phone):
         worksheet = gc.open("Leads_Ferramenta").sheet1
         
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        row_to_add = [email, phone, timestamp]
+        row_to_add = [nome, phone, timestamp]
         
         worksheet.append_row(row_to_add)
         
@@ -38,10 +38,10 @@ def render_landing_page():
     #    st.image("https://linceinvest.com.br/wp-content/uploads/2024/03/Agrupar-1-1-2048x393.png", use_container_width=True)
 
     st.title("💰 Comparador de Renda Fixa!")
-    st.markdown("Informe seu e-mail e telefone para acessar o simulador:")
+    st.markdown("Informe seu nome e telefone para acessar o simulador:")
         
     with st.form(key='lead_form'):
-        email = st.text_input("Seu e-mail:")
+        nome = st.text_input("Seu nome:")
         # --- AJUSTE: Adicionando um placeholder para a máscara de telefone ---
         phone = st.text_input("Seu telefone celular:", placeholder="(99) 99999-9999")
         # --------------------------------------------------------------------
@@ -49,12 +49,12 @@ def render_landing_page():
 
     if submit_button:
         # --- AJUSTE: Validação e mensagem de erro mais amigável ---
-        if not email or not phone:
-            st.error("A ferramenta é absolutamente gratuita. Peço só seu e-mail e telefone para eu te conhecer melhor ;-)")
+        if not nome or not phone:
+            st.error("A ferramenta é absolutamente gratuita. Peço só seu nome e telefone para eu te conhecer melhor ;-)")
         else:
             # --- AJUSTE: Adicionando um spinner de loading ---
             with st.spinner("Salvando seus dados... Aguarde um momento."):
-                if save_to_google_sheets(email, phone):
+                if save_to_google_sheets(nome, phone):
                     st.success("Prontinho! Você será redirecionado para a ferramenta automaticamente.")
                     # A função save_to_google_sheets agora apenas retorna True/False
                     
