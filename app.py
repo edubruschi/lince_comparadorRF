@@ -24,8 +24,6 @@ from ui_elements import (
     render_detailed_sections,
     render_footer
 )
-from landing_page import render_landing_page # A função da landing page
-
 
 # --- CONFIGURAÇÕES INICIAIS (DEVE SER SEMPRE O PRIMEIRO CÓDIGO STREAMLIT) ---
 st.set_page_config(
