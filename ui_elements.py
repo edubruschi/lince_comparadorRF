@@ -133,7 +133,7 @@ def render_input_forms():
     taxa_cdi_anual_atual = st.number_input(
         "Taxa do CDI anual atual (%)", 
         min_value=0.01, 
-        value=14.90,
+        value=14.65,
         step=0.01, 
         format="%.2f",
         key="taxa_cdi_anual_input"
